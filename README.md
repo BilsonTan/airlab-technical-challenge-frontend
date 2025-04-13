@@ -1,6 +1,6 @@
 # Notes from developer:
 
-- To test the code, you have to enter the frontend folder and backend folder respectively and run `yarn start`
+### To test the code, you have to enter the frontend folder and backend folder respectively and run `yarn start`
 - Backend server uses the port 8080
 - Frontend uses port 3000
 
@@ -27,7 +27,7 @@ Each trajectory consists of the following properties:
 
 # Required Tasks
 
-1. Implement a backend service to serve the data in the provided file. [DONE]
+1. Implement a backend service to serve the data in the provided file. `IMPLEMENTED`
 
    This should ideally be implemented using Java/Kotlin and Spring Framework.
    A Typescript (Javascript is NOT acceptable) on Node.js solution is acceptable also.
@@ -36,7 +36,7 @@ Each trajectory consists of the following properties:
 
    A well designed API is important. Do note your design considerations for discussion during the interview.
 
-2. Implement a web application using Typescript (Javascript is NOT acceptable), React and a geospatial visualization library (e.g. DeckGL, OpenLayer, Leaflet, Cesium) to provide an interactive visualization of the trajectories. [DONE]
+2. Implement a web application using Typescript (Javascript is NOT acceptable), React and a geospatial visualization library (e.g. DeckGL, OpenLayer, Leaflet, Cesium) to provide an interactive visualization of the trajectories. `IMPLEMENTED`
 
    Basic requirements for the visualization:
 
@@ -47,12 +47,12 @@ Each trajectory consists of the following properties:
 
 # Good to Have Tasks
 
-1. Filter visible trajectories by time range and arrival or departure airports [DONE]
-2. Integration of the backend with a persistent storage (e.g. SQL database, MongoDB, ElasticSearch). [MISSING]
+1. Filter visible trajectories by time range and arrival or departure airports `IMPLEMENTED`
+2. Integration of the backend with a persistent storage (e.g. SQL database, MongoDB, ElasticSearch). `NOT IMPLEMENTED`
 
 # Stretch Task
 
-Implement other interesting ways of visualizing or interacting with the data. [MISSING]
+Implement other interesting ways of visualizing or interacting with the data. `NOT IMPLEMENTED`
 
 # What to expect during interview
 
