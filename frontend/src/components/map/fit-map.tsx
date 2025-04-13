@@ -1,13 +1,13 @@
-import { useEffect } from "react";
-import { useMap } from "react-leaflet";
-import { TrajectoryTypes } from "../../types";
-import { LatLngBounds } from "leaflet";
+import { useEffect } from 'react';
+import { useMap } from 'react-leaflet';
+import { TrajectoryTypes } from '../../types';
+import { LatLngBounds } from 'leaflet';
 
 interface FitMapToBoundsProps {
   trajectories: TrajectoryTypes.Trajectory[];
 }
 
-export const FitMapToBounds = (props: FitMapToBoundsProps ) => {
+export const FitMapToBounds = (props: FitMapToBoundsProps) => {
   const map = useMap();
   const { trajectories } = props;
 

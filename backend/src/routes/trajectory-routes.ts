@@ -1,12 +1,12 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response } from 'express';
 import {
   getAllAirports,
   getAllTrajectories,
-} from "../services/trajectory-service";
+} from '../services/trajectory-service';
 
 const router = express.Router();
 
-router.get("/", (req: Request, res: Response) => {
+router.get('/', (req: Request, res: Response) => {
   const { departure, arrival, startTime, endTime } = req.query;
 
   const all = getAllTrajectories();
@@ -38,7 +38,7 @@ router.get("/", (req: Request, res: Response) => {
   res.json(filtered);
 });
 
-router.get("/airports", (req: Request, res: Response) => {
+router.get('/airports', (req: Request, res: Response) => {
   const airports = getAllAirports();
   res.json(airports);
 });

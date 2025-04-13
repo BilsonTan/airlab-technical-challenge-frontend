@@ -1,5 +1,5 @@
-import DatePicker from "react-datepicker";
-import { TextLabel, Row } from "../../common";
+import DatePicker from 'react-datepicker';
+import { TextLabel, Row } from '../../common';
 import './filter-bar.css';
 
 interface DateFilterProps {
@@ -15,10 +15,13 @@ export const DateFilter = (props: DateFilterProps) => {
   return (
     <Row className="date-filter">
       <div>
-        <TextLabel text="Start Time" sx={{
-          display: "block",
-          marginBottom: "5px",
-        }}/>
+        <TextLabel
+          text="Start Time"
+          sx={{
+            display: 'block',
+            marginBottom: '5px',
+          }}
+        />
         <DatePicker
           selected={startTime}
           onChange={onHandleStartTime}
@@ -31,10 +34,13 @@ export const DateFilter = (props: DateFilterProps) => {
       </div>
 
       <div>
-        <TextLabel text="End Time" sx={{
-          display: "block",
-          marginBottom: "5px",
-        }}/>
+        <TextLabel
+          text="End Time"
+          sx={{
+            display: 'block',
+            marginBottom: '5px',
+          }}
+        />
         <DatePicker
           selected={endTime}
           onChange={onHandleEndTime}

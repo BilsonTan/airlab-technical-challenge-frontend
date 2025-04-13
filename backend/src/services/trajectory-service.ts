@@ -1,12 +1,17 @@
-import fs from "fs";
-import readline from "readline";
-import path from "path";
-import { Airports, AirportType, Trajectory, TrajectorySchema } from "../types/trajectory-types";
+import fs from 'fs';
+import readline from 'readline';
+import path from 'path';
+import {
+  Airports,
+  AirportType,
+  Trajectory,
+  TrajectorySchema,
+} from '../types/trajectory-types';
 
-let trajectories: Trajectory[] = []; 
+let trajectories: Trajectory[] = [];
 
-export const loadTrajectories = async () =>{
-  const filePath = path.join(__dirname, "..", "data", "trajectories.jsonl");
+export const loadTrajectories = async () => {
+  const filePath = path.join(__dirname, '..', 'data', 'trajectories.jsonl');
   const fileStream = fs.createReadStream(filePath);
 
   const rl = readline.createInterface({
@@ -21,28 +26,28 @@ export const loadTrajectories = async () =>{
       if (result.success) {
         trajectories.push(result.data);
       } else {
-        console.warn("Invalid line:", result.error);
+        console.warn('Invalid line:', result.error);
       }
     } catch (e) {
-      console.error("Failed to parse line:", e);
+      console.error('Failed to parse line:', e);
     }
   }
   console.log(`Loaded ${trajectories.length} trajectories`);
-}
+};
 
 export const getAllTrajectories = () => {
   return trajectories;
-}
+};
 
 export const getAllAirports = () => {
   const airportMap = new Map<string, Airports>();
-  
-  trajectories.forEach(trajectory => {
+
+  trajectories.forEach((trajectory) => {
     if (!airportMap.has(trajectory.adep)) {
       airportMap.set(trajectory.adep, {
         code: trajectory.adep,
         count: 1,
-        type: AirportType.DEPARTURE
+        type: AirportType.DEPARTURE,
       });
     } else {
       const airport = airportMap.get(trajectory.adep)!;
@@ -51,12 +56,12 @@ export const getAllAirports = () => {
         airport.type = AirportType.BOTH;
       }
     }
-    
+
     if (!airportMap.has(trajectory.ades)) {
       airportMap.set(trajectory.ades, {
         code: trajectory.ades,
         count: 1,
-        type: AirportType.ARRIVAL
+        type: AirportType.ARRIVAL,
       });
     } else {
       const airport = airportMap.get(trajectory.ades)!;
@@ -66,6 +71,8 @@ export const getAllAirports = () => {
       }
     }
   });
-  
-  return Array.from(airportMap.values()).sort((a, b) => a.code.localeCompare(b.code));
-  }
+
+  return Array.from(airportMap.values()).sort((a, b) =>
+    a.code.localeCompare(b.code)
+  );
+};

@@ -1,9 +1,9 @@
-import { useRef } from "react";
-import { useTrajectoriesFilters } from "../../hooks/useTrajectoriesFilters";
-import { DateFilter } from "./date-filter";
-import { LocationFilter } from "./location-filter";
-import { Row } from "../../common/row";
-import "./filter-bar.css";
+import { useRef } from 'react';
+import { useTrajectoriesFilters } from '../../hooks/useTrajectoriesFilters';
+import { DateFilter } from './date-filter';
+import { LocationFilter } from './location-filter';
+import { Row } from '../../common/row';
+import './filter-bar.css';
 
 export const FilterBar = () => {
   const {
@@ -43,11 +43,11 @@ export const FilterBar = () => {
 
   return (
     <>
-      <div className={"filter-bar"}>
+      <div className={'filter-bar'}>
         <Row
           sx={{
-            justifyContent: "center",
-            alignItems: "center",
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
           <DateFilter

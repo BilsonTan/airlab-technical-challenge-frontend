@@ -1,1 +1,1 @@
-export * from "./trajectory-api";
+export * from './trajectory-api';

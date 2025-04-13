@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import { useTrajectoriesContext } from "../context/trajectories-context";
-import { fetchTrajectoriesApi } from "../api";
-import { TrajectoryTypes } from "../types";
+import { useEffect, useState } from 'react';
+import { useTrajectoriesContext } from '../context/trajectories-context';
+import { fetchTrajectoriesApi } from '../api';
+import { TrajectoryTypes } from '../types';
 
 export const useTrajectoriesFilters = () => {
   const { applyFilteredTrajectories, onHandleReset } = useTrajectoriesContext();
-  const [departure, setDeparture] = useState("");
-  const [arrival, setArrival] = useState("");
+  const [departure, setDeparture] = useState('');
+  const [arrival, setArrival] = useState('');
   const [startTime, setStartTime] = useState<Date | null>(null);
   const [endTime, setEndTime] = useState<Date | null>(null);
   const [filteredTrajectories, setFilteredTrajectories] = useState<
@@ -24,15 +24,15 @@ export const useTrajectoriesFilters = () => {
       setFilteredTrajectories(data);
       return data;
     } catch (error) {
-      console.error("Error fetching filtered trajectories:", error);
+      console.error('Error fetching filtered trajectories:', error);
     }
   };
 
   const handleResetFilters = () => {
     onHandleReset();
     setFilteredTrajectories([]);
-    setDeparture("");
-    setArrival("");
+    setDeparture('');
+    setArrival('');
     setStartTime(null);
     setEndTime(null);
   };

@@ -1,7 +1,7 @@
-import { MapContainer, TileLayer } from "react-leaflet";
-import { useTrajectoriesContext } from "../../context/trajectories-context";
-import { FitMapToBounds } from "./fit-map";
-import { TrajectoryMap } from "./trajectory-map";
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { useTrajectoriesContext } from '../../context/trajectories-context';
+import { FitMapToBounds } from './fit-map';
+import { TrajectoryMap } from './trajectory-map';
 
 export const Map = () => {
   const { trajectories } = useTrajectoriesContext();
@@ -11,7 +11,7 @@ export const Map = () => {
       center={[0, 0]}
       zoom={2}
       scrollWheelZoom={true}
-      style={{ height: "100vh", width: "100%" }}
+      style={{ height: '100vh', width: '100%' }}
     >
       <TileLayer
         attribution="&copy; OpenStreetMap contributors"

@@ -1,7 +1,7 @@
-import Select from "react-select";
-import { useTrajectoriesContext } from "../../context/trajectories-context";
-import React from "react";
-import { TextLabel, Row } from "../../common";
+import Select from 'react-select';
+import { useTrajectoriesContext } from '../../context/trajectories-context';
+import React from 'react';
+import { TextLabel, Row } from '../../common';
 
 interface LocationFilterProps {
   departure: string;
@@ -24,17 +24,17 @@ export const LocationFilter = (props: LocationFilterProps) => {
     useTrajectoriesContext();
 
   return (
-    <Row className={"location-filter-container"}>
+    <Row className={'location-filter-container'}>
       <div>
         <TextLabel
           text="Departure (ICAO)"
-          sx={{ display: "block", marginBottom: "5px" }}
+          sx={{ display: 'block', marginBottom: '5px' }}
         />
         <Select
           ref={departureRef}
           value={departureList.find((option) => option.value === departure)}
           onChange={(selected) => {
-            const val = selected?.value || "";
+            const val = selected?.value || '';
             onHandleDeparture(val);
           }}
           options={departureList}
@@ -42,19 +42,19 @@ export const LocationFilter = (props: LocationFilterProps) => {
           placeholder="Select Departure..."
           isSearchable
           isClearable
-          styles={{ container: (base) => ({ ...base, width: "100%" }) }}
+          styles={{ container: (base) => ({ ...base, width: '100%' }) }}
         />
       </div>
       <div>
         <TextLabel
           text="Arrival (ICAO)"
-          sx={{ display: "block", marginBottom: "5px" }}
+          sx={{ display: 'block', marginBottom: '5px' }}
         />
         <Select
           ref={arrivalRef}
           value={arrivalList.find((option) => option.value === arrival)}
           onChange={(selected) => {
-            const val = selected?.value || "";
+            const val = selected?.value || '';
             onHandleArrival(val);
           }}
           options={arrivalList}
@@ -62,7 +62,7 @@ export const LocationFilter = (props: LocationFilterProps) => {
           placeholder="Select Arrival..."
           isSearchable
           isClearable
-          styles={{ container: (base) => ({ ...base, width: "100%" }) }}
+          styles={{ container: (base) => ({ ...base, width: '100%' }) }}
         />
       </div>
     </Row>

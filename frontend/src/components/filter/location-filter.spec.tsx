@@ -1,21 +1,21 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import { LocationFilter } from "./location-filter";
-import { useTrajectoriesContext } from "../../context/trajectories-context";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { LocationFilter } from './location-filter';
+import { useTrajectoriesContext } from '../../context/trajectories-context';
 
 // Mock the useTrajectoriesContext hook
-jest.mock("../../context/trajectories-context", () => ({
+jest.mock('../../context/trajectories-context', () => ({
   useTrajectoriesContext: jest.fn(),
 }));
 
-describe("LocationFilter", () => {
+describe('LocationFilter', () => {
   const mockDepartureList = [
-    { value: "JFK", label: "JFK" },
-    { value: "LAX", label: "LAX" },
+    { value: 'JFK', label: 'JFK' },
+    { value: 'LAX', label: 'LAX' },
   ];
   const mockArrivalList = [
-    { value: "ORD", label: "ORD" },
-    { value: "ATL", label: "ATL" },
+    { value: 'ORD', label: 'ORD' },
+    { value: 'ATL', label: 'ATL' },
   ];
 
   beforeEach(() => {
@@ -26,7 +26,7 @@ describe("LocationFilter", () => {
     });
   });
 
-  it("Given the correct props being passed in, should render the LocationFilter component correctly", () => {
+  it('Given the correct props being passed in, should render the LocationFilter component correctly', () => {
     const mockOnHandleDeparture = jest.fn();
     const mockOnHandleArrival = jest.fn();
 
@@ -42,9 +42,9 @@ describe("LocationFilter", () => {
     );
 
     // Check if the component renders correctly
-    expect(screen.getByText("Departure (ICAO)")).toBeInTheDocument();
-    expect(screen.getByText("Arrival (ICAO)")).toBeInTheDocument();
-    expect(screen.getByText("Select Departure...")).toBeInTheDocument();
-    expect(screen.getByText("Select Arrival...")).toBeInTheDocument();
+    expect(screen.getByText('Departure (ICAO)')).toBeInTheDocument();
+    expect(screen.getByText('Arrival (ICAO)')).toBeInTheDocument();
+    expect(screen.getByText('Select Departure...')).toBeInTheDocument();
+    expect(screen.getByText('Select Arrival...')).toBeInTheDocument();
   });
 });

@@ -27,7 +27,8 @@
   "scripts": {
     "start": "react-scripts start",
     "test": "jest",
-    "test-coverage": "jest --coverage"
+    "test-coverage": "jest --coverage",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
     "@types/lodash": "^4.17.16",
     "depcheck": "^1.4.7",
     "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.5.3",
     "ts-jest": "^29.3.2",
     "ts-node": "^10.9.2"
   }

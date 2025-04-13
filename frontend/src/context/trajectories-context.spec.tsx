@@ -1,26 +1,26 @@
-import React from "react";
-import { render, waitFor, screen } from "@testing-library/react";
+import React from 'react';
+import { render, waitFor, screen } from '@testing-library/react';
 import {
   TrajectoriesProvider,
   useTrajectoriesContext,
-} from "./trajectories-context";
-import { fetchTrajectoriesApi, fetchAirportsApi } from "../api";
-import { TrajectoryTypes } from "../types";
+} from './trajectories-context';
+import { fetchTrajectoriesApi, fetchAirportsApi } from '../api';
+import { TrajectoryTypes } from '../types';
 
-jest.mock("../api");
+jest.mock('../api');
 
 const mockTrajectories = [
   {
     id: 1,
-    adep: "VTBS",
-    ades: "WIII",
+    adep: 'VTBS',
+    ades: 'WIII',
     waypoints: [],
   },
 ] as TrajectoryTypes.Trajectory[];
 
 const mockAirports = [
-  { code: "JFK", count: 2, type: TrajectoryTypes.AirportType.DEPARTURE },
-  { code: "LAX", count: 1, type: TrajectoryTypes.AirportType.BOTH },
+  { code: 'JFK', count: 2, type: TrajectoryTypes.AirportType.DEPARTURE },
+  { code: 'LAX', count: 1, type: TrajectoryTypes.AirportType.BOTH },
 ] as TrajectoryTypes.Airports[];
 
 (fetchTrajectoriesApi as jest.Mock).mockResolvedValue(mockTrajectories);
@@ -48,8 +48,8 @@ const TestComponent = () => {
   );
 };
 
-describe("TrajectoriesContext", () => {
-  it("Given the api calls are mocked and called, should provide the correct trajectory and airport data", async () => {
+describe('TrajectoriesContext', () => {
+  it('Given the api calls are mocked and called, should provide the correct trajectory and airport data', async () => {
     render(
       <TrajectoriesProvider>
         <TestComponent />
@@ -57,13 +57,13 @@ describe("TrajectoriesContext", () => {
     );
 
     await waitFor(() =>
-      expect(screen.getByTestId("trajectory-count")).toHaveTextContent("1")
+      expect(screen.getByTestId('trajectory-count')).toHaveTextContent('1')
     );
-    expect(screen.getByTestId("departure-count")).toHaveTextContent("2");
-    expect(screen.getByTestId("arrival-count")).toHaveTextContent("1");
-    expect(screen.getByTestId("loading-trajectories")).toHaveTextContent(
-      "false"
+    expect(screen.getByTestId('departure-count')).toHaveTextContent('2');
+    expect(screen.getByTestId('arrival-count')).toHaveTextContent('1');
+    expect(screen.getByTestId('loading-trajectories')).toHaveTextContent(
+      'false'
     );
-    expect(screen.getByTestId("loading-airports")).toHaveTextContent("false");
+    expect(screen.getByTestId('loading-airports')).toHaveTextContent('false');
   });
 });

@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { TrajectoryTypes } from "../types";
-import { fetchTrajectoriesApi, fetchAirportsApi } from "../api";
-import isEmpty from "lodash/isEmpty";
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { TrajectoryTypes } from '../types';
+import { fetchTrajectoriesApi, fetchAirportsApi } from '../api';
+import isEmpty from 'lodash/isEmpty';
 
 const TrajectoriesContext = createContext<
   TrajectoryTypes.TrajectoriesContextType | undefined
@@ -96,7 +96,7 @@ export const useTrajectoriesContext = () => {
   const context = useContext(TrajectoriesContext);
   if (!context) {
     throw new Error(
-      "useTrajectoriesContext must be used within a TrajectoriesProvider"
+      'useTrajectoriesContext must be used within a TrajectoriesProvider'
     );
   }
   return context;

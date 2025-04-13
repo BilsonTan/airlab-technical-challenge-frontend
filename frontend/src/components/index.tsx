@@ -1,6 +1,6 @@
-import { TrajectoriesProvider } from "../context/trajectories-context";
-import { FilterBar } from "./filter";
-import { Map } from "./map";
+import { TrajectoriesProvider } from '../context/trajectories-context';
+import { FilterBar } from './filter';
+import { Map } from './map';
 
 export const AircraftTrajectories = () => {
   return (

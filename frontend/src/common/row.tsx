@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface RowProps {
   children: React.ReactNode;
@@ -13,12 +13,12 @@ export const Row = (props: RowProps) => {
       className={className}
       data-testid={`${className || 'common'}-row`}
       style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "20px",
-          justifyContent: "center",
-          alignItems: "center",
-          ...sx,
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '20px',
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...sx,
       }}
     >
       {children}

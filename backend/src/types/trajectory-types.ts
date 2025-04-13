@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from 'zod';
 
 export const WaypointSchema = z.object({
   longitude: z.number(),
@@ -19,9 +19,9 @@ export type Waypoint = z.infer<typeof WaypointSchema>;
 export type Trajectory = z.infer<typeof TrajectorySchema>;
 
 export enum AirportType {
-  DEPARTURE = "departure",
-  ARRIVAL = "arrival",
-  BOTH = "both",
+  DEPARTURE = 'departure',
+  ARRIVAL = 'arrival',
+  BOTH = 'both',
 }
 
 export interface Airports {
