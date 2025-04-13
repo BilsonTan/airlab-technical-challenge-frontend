@@ -1,0 +1,23 @@
+.filter-bar {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.filter-bar-actions {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.date-filter-container .react-datepicker__input-container input {
+  height: 38px; 
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
