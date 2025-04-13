@@ -1,6 +1,14 @@
 # Notes from developer:
 
-### To test the code, you have to enter the frontend folder and backend folder respectively
+### To run and test the code there's 2 ways:
+
+### 1. From the root folder
+- Run `yarn` on the root folder
+- Run `yarn install:all` to install dependencies on both frontend and backend folders
+- Run `yarn start:all` this will start both frontend and backend concurrently
+- Run `yarn test:all` to test both frontend and backend concurrently
+
+### 2. Can enter the the frontend folder and backend folder respectively to run it 
 - Run `yarn` to install the dependencies for both frontend and backend
 - Run`yarn start` to start the servers for each. Backend server uses port 8080 and frontend uses port 3000
 - To test run `yarn test` or `yarn test-coverage`

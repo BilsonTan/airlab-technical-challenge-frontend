@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "install:all": "yarn --cwd frontend && yarn --cwd backend",
+    "start:all": "concurrently \"yarn --cwd frontend start\" \"yarn --cwd backend start\"",
+    "test:all": "concurrently \"yarn --cwd frontend test\" \"yarn --cwd backend test\""
+  }
+}
