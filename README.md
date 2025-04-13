@@ -1,8 +1,9 @@
 # Notes from developer:
 
-### To test the code, you have to enter the frontend folder and backend folder respectively and run `yarn start`
-- Backend server uses the port 8080
-- Frontend uses port 3000
+### To test the code, you have to enter the frontend folder and backend folder respectively
+- Run `yarn` to install the dependencies for both frontend and backend
+- Run`yarn start` to start the servers for each. Backend server uses port 8080 and frontend uses port 3000
+- To test run `yarn test` or `yarn test-coverage`
 
 # Objective
 
