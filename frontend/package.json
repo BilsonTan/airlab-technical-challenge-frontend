@@ -1,5 +1,5 @@
 {
-  "name": "aircraft-visualizer",
+  "name": "aircraft-trajectories-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,4 +1,7 @@
 {
+  "name": "aircraft-trajectories-app",
+  "version": "0.1.0",
+  "private": true,
   "devDependencies": {
     "concurrently": "^9.1.2"
   },
