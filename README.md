@@ -62,11 +62,3 @@ Each trajectory consists of the following properties:
 # Stretch Task
 
 Implement other interesting ways of visualizing or interacting with the data. `NOT IMPLEMENTED`
-
-# What to expect during interview
-
-1. You will be required to do a live demonstration of your solution and walk through your codes briefly to provide an overview of how it is implemented and your design and coding considerations.
-
-2. We will have a short discussion on how you will implement some new requirements that may require changes to both system and user interface design.
-
-3. Finally, you will be given 30 minutes to add a small feature to your solution. We understand that you may not be able to complete the feature in time. What is more important is for you to tell us your design and coding considerations and where and how you are going to modify the codes.
